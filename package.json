@@ -6,7 +6,7 @@
   "scripts": {
     "server": "nodemon --watch server --exec babel-node -- server/index.js",
     "start": "npm run server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "tape --require babel-register client/tests/*.tests.js | faucet"
   },
   "keywords": [
     "react",
@@ -32,6 +32,7 @@
     "json-loader": "^0.5.4",
     "nodemon": "^1.11.0",
     "react-transform-hmr": "^1.0.4",
+    "tape": "^4.6.3",
     "webpack": "^1.13.3",
     "webpack-dev-middleware": "^1.8.4",
     "webpack-hot-middleware": "^2.13.2"
@@ -44,6 +45,7 @@
     "react-router": "^3.0.0",
     "redux": "^3.6.0",
     "redux-logger": "^2.7.4",
-    "redux-thunk": "^2.1.0"
+    "redux-thunk": "^2.1.0",
+    "uuid": "^3.0.0"
   }
 }
