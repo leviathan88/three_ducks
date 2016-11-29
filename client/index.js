@@ -8,5 +8,7 @@ import store from './store'
 import routes from './routes'
 
 render(
-  <Router history={browserHistory} routes={routes}/>
+  <Provider store={store}>
+    <Router history={browserHistory} routes={routes}/>
+  </Provider>
   , document.getElementById('app'))
